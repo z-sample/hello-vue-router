@@ -1,17 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>hello-vue-router</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but hello-vue-router doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>semantic/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>css/style.css">
+  <script src="<%= BASE_URL %>js/jquery.min.js"></script>
+  <script src="<%= BASE_URL %>semantic/semantic.min.js"></script>
+  <script src="<%= BASE_URL %>js/util.js"></script>
+  <title>hello-vue-router</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+    }
+
+    #app {
+      height: 100%;
+    }
+
+    #main {
+      width: 100%;
+    }
+
+    .ui.inverted.menu {
+      background-color: #252a2f;
+    }
+
+    /* 修改弹窗 */
+    .flex-box {
+      display: flex;
+      /*默认为: flex-direction: row;子元素按左右排*/
+      flex-direction: column;
+      /*子元素按上下排*/
+      /*flex-direction: column-reverse; !*子元素按下->上排*!*/
+      height: 100%;
+    }
+
+    .flex-box-header {
+      background-color: #252a2f;
+      border-bottom: solid 1px #666666;
+      line-height: 50px;
+      color: #ffffff;
+      padding-left: 14px;
+      font-size: 16px;
+    }
+
+    .flex-box-body {
+      display: flex;
+      /*子元素要用到css flex, 这里就需要定义*/
+      flex: 1;
+    }
+
+    .flex-box-body .left {
+      max-width: 215px;
+      margin-right: 20px;
+      /*background-color: #1b1c1d;*/
+      /*background-color: #252a2f;*/
+    }
+
+    .flex-box-body .right {
+      flex: 1;
+      /* 撑满剩余空间 */
+      overflow: auto;
+    }
+
+    .flex-box-footer {}
+
+    .ui.menu {
+      border-radius: 0px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <script>
+    window.api = {
+      "user_add": "/user/add"
+    }
+  </script>
+  <noscript>
+    <strong>We're sorry but hello-vue-router doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>
